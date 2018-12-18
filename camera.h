@@ -1,12 +1,10 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include <QMainWindow>
-
 #include <QCamera>
 #include <QCameraImageCapture>
 
-class Camera : public QMainWindow
+class Camera : public QObject
 {
      Q_OBJECT
 
@@ -14,19 +12,18 @@ private:
     QScopedPointer<QCamera> camera;
     QScopedPointer<QCameraImageCapture> imageCapture;
     QString filename;
-    bool guiEnabled;
+    bool pc;
 
     void capture();
     bool isCameraAvailable();
     void imageSaved(int id, const QString &fileName);
     QString getFilename();
-    bool isGuiEnabled();
+    bool isPc();
 
 public:
-    Camera(QWidget *parent = 0);
+    Camera(bool pc, QObject *parent = 0);
     void show();
     void setFilename(QString filename);
-    void setGuiEnabled(bool value);
 };
 
 #endif // CAMERA_H

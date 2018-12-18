@@ -20,8 +20,6 @@ Builder: qtc5
 
 # This section specifies build dependencies that are resolved using pkgconfig.
 # This is the preferred way of specifying build dependencies for your package.
-PkgConfigBR:
-  - gstreamer-1.0
 
 # Build dependencies without a pkgconfig setup can be listed here
 # PkgBR:

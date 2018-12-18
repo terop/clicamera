@@ -1,26 +1,27 @@
-#include <QtWidgets>
+#include <iostream>
+
 #include <QCommandLineParser>
+#include <QFileInfo>
+#include <QRegularExpression>
 
 #include "camera.h"
 
-#include <iostream>
-
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
-    QApplication::setApplicationName("clicamera");
-    QApplication::setApplicationVersion("0.1");
+    QCoreApplication app(argc, argv);
+    QCoreApplication::setApplicationName("clicamera");
+    QCoreApplication::setApplicationVersion("0.1");
 
     QCommandLineParser parser;
-    parser.setApplicationDescription("Test helper");
+    parser.setApplicationDescription("A CLI camera application for Jolla and PC with camera");
     parser.addHelpOption();
     parser.addVersionOption();
-    parser.addPositionalArgument("filename", QApplication::translate("main", "Name of the output picture file."));
+    parser.addPositionalArgument("filename", QCoreApplication::translate("main", "Name of the output picture file."));
 
     parser.addOptions({
-            {{"g", "gui"},
-              QApplication::translate("main", "Show GUI (currently only viewfinder)")},
-        });
+        {{"p", "pc"},
+             QCoreApplication::translate("main", "Running on PC, i.e. do no Jolla specific modifications")}
+     });
 
     parser.process(app);
 
@@ -46,10 +47,8 @@ int main(int argc, char *argv[])
 
     filename = filenamePath.path() + "/" + filenamePath.fileName();
 
-    Camera camera;
+    Camera camera(parser.isSet("pc"));
     camera.setFilename(filename);
-    camera.setGuiEnabled(parser.isSet("gui"));
-
     camera.show();
 
     return app.exec();

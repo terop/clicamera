@@ -1,8 +1,10 @@
 TEMPLATE = app
-CONFIG += c++11
-CONFIG += qt
 
-QT += core gui multimedia multimediawidgets
+TARGET = clicamera
+
+CONFIG += c++11 qt
+
+QT += core gui multimedia
 
 SOURCES += \
     main.cpp \

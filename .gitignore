@@ -38,26 +38,8 @@ Thumbs.db
 # qtcreator generated files
 *.pro.user*
 
-# xemacs temporary files
-*.flc
-
 # Vim temporary files
 .*.swp
-
-# Visual Studio generated files
-*.ib_pdb_index
-*.idb
-*.ilk
-*.pdb
-*.sln
-*.suo
-*.vcproj
-*vcproj.*.*.user
-*.ncb
-*.sdf
-*.opensdf
-*.vcxproj
-*vcxproj.*
 
 # MinGW generated files
 *.Debug
@@ -66,8 +48,4 @@ Thumbs.db
 # Python byte code
 *.pyc
 
-# Binaries
-# --------
-*.dll
-*.exe
-
+upload_image_conf.sh
