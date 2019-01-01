@@ -1,5 +1,5 @@
 #!/bin/sh
-# 2018 Tero Paloheimo
+# 2018-2019 Tero Paloheimo
 
 # Script for taking a image with clicamera over a SSH connection.
 

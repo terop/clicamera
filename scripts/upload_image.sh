@@ -1,5 +1,5 @@
 #!/bin/sh
-# 2018 Tero Paloheimo
+# 2018-2019 Tero Paloheimo
 
 # Script for uploading an image to a remote host.
 

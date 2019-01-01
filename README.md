@@ -23,4 +23,4 @@ Only GCC has been tested to work but Clang may also work.
 ## License
 See the MIT license in the LICENSE file.
 
-Copyright (c) 2018 Tero Paloheimo
+Copyright (c) 2018-2019 Tero Paloheimo
