@@ -68,8 +68,8 @@ upload_image() {
 
     # Add image name to env-logger database
     if [ ${env_logger_integration} -ne 0 ]; then
-        curl --data-urlencode "image-name=${image_date}" --data-urlencode "code=${auth_code}" \
-             "{env_logger_url}/image"
+        curl -s -S --data-urlencode "image-name=${image_date}" --data-urlencode "code=${auth_code}" \
+             "${env_logger_url}/image"
     fi
 }
 
