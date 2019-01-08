@@ -40,8 +40,14 @@ def annotate(filename, font_path):
 def crop(image, filename):
     """Crops the input image and overwrites the original image with the cropped
     image."""
-    dimensions = (0, 0, image.width, int(image.height * 0.7))
+    # Crop bottom
+    dimensions = (0, 0, image.width, int(image.height * 0.68))
     region = image.crop(dimensions)
+
+    # Crop top
+    dimensions = (0, 150, region.width, region.height)
+    region = region.crop(dimensions)
+
     region.save(filename)
 
 
