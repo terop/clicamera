@@ -45,7 +45,7 @@ def crop(image, filename):
     region = image.crop(dimensions)
 
     # Crop top
-    dimensions = (0, 150, region.width, region.height)
+    dimensions = (0, 110, region.width, region.height)
     region = region.crop(dimensions)
 
     region.save(filename)
