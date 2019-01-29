@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     QFileInfo filenamePath(args.at(0));
 
     if (!filenamePath.fileName().contains(QRegularExpression("\\w+\\.jpe?g"))) {
-        std::cerr << "Error: value for the 'filename' argument is invalid, it must be a file" << std::endl;
+        std::cerr << "Error: value for the 'filename' argument is invalid, it must be a file ending with '.jp(e)g'" << std::endl;
         return 1;
     }
 
