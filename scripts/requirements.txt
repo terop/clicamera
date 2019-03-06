@@ -1,2 +1,3 @@
 # Requirements file for process_image.py
+# Mandatory dependencies on Debian: zlib1g-dev libjpeg-dev
 Pillow
